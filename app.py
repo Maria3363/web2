@@ -14,6 +14,11 @@ def about():
 def list_tasks():
     tareas = ["Lavar la ropa", "Limpiar la casa", "Hacer la compra", "Estudiar para el examen", "Hacer ejercicio", "Leer un libro"]
     return render_template('tasks.html', tareas=tareas)
-
+@app.route('/login')
+def login():
+    return render_template('login.html')
+@app.route('/signup')
+def signup():
+    return render_template('signup.html')
 if __name__ == '__main__':
     app.run(debug=True, host='127.0.0.1', port=5001)
